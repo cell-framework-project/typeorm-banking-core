@@ -8,9 +8,6 @@ export class Journal {
   id:number;
 
   @Column()
-  code:string;
-
-  @Column()
   name:string;
 
   @OneToMany(() => Document, (document) => document.journal)
