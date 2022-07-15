@@ -1,10 +1,10 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm"
+import { Column, Entity, OneToMany, PrimaryColumn } from "typeorm"
 import { Entry } from "./entry";
 
 @Entity()
 export class Account {
 
-  @PrimaryGeneratedColumn()
+  @PrimaryColumn()
   id:number;
 
   @Column()

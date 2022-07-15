@@ -11,6 +11,9 @@ export class Document {
   @Column()
   name:string;
 
+  @Column()
+  type
+
   @ManyToOne(() => Journal, (journal) => journal.documents,{cascade:['insert','remove','update']})
   journal: Journal;
 
