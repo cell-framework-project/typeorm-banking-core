@@ -7,7 +7,7 @@ import { Journal } from "./entity/journal";
 import { Transaction } from "./entity/transaction";
 import { User } from "./entity/user";
 
-import {dataSourceConfig} from './enviroment';
+import {dataSourceConfig} from './config/enviroment';
 
 export const AppDataSource = new DataSource({
     type: "mysql",
