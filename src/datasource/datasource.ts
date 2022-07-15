@@ -1,13 +1,11 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { Account } from "./entity/account";
-import { Document } from "./entity/document";
-import { Entry } from "./entity/entry";
-import { Journal } from "./entity/journal";
-import { Transaction } from "./entity/transaction";
-import { User } from "./entity/user";
+import { Account } from "../entity/account";
+import { Document } from "../entity/document";
+import { Entry } from "../entity/entry";
+import { Transaction } from "../entity/transaction";
 
-import {dataSourceConfig} from './config/enviroment';
+import {dataSourceConfig} from '../config/enviroment';
 
 export const AppDataSource = new DataSource({
     type: "mysql",
@@ -19,10 +17,8 @@ export const AppDataSource = new DataSource({
     synchronize: true,
     logging: false,
     entities: [
-        User,
         Account,
         Document,
-        Journal,
         Transaction,
         Entry
     ],
